@@ -81,11 +81,11 @@
   "stateUnsupported": {
     "message": "This page cannot be changed"
   },
-  "creditsBy": {
+  "aboutAuthor": {
     "message": "Made by"
   },
-  "creditsSource": {
-    "message": "Source code"
+  "creditsBy": {
+    "message": "by"
   },
   "popupSettings": {
     "message": "Settings"

@@ -93,20 +93,16 @@ body {
 }
 
 .credits {
-  padding: 8px 14px 10px;
-  border-top: 1px solid var(--border);
+  display: block;
+  padding: 0 14px 10px;
   color: var(--text-3);
   font-size: 11px;
-}
-
-.credits a {
-  color: var(--text-2);
+  text-align: center;
   text-decoration: none;
 }
 
-.credits a:hover {
-  color: var(--text);
-  text-decoration: underline;
+.credits:hover {
+  color: var(--text-2);
 }
 
 .popup[data-inactive='true'] .site {
