@@ -73,9 +73,38 @@
 
 /* Main area */
 .main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 860px;
-  padding: 40px 40px 96px;
+  min-height: 100vh;
+  padding: 40px 40px 24px;
+}
+
+/* The footer stays at the bottom when the section is short. */
+.page-credits {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 64px;
+}
+
+.page-credits a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-3);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.page-credits a:hover {
+  color: var(--text);
+}
+
+.page-credits svg {
+  width: 14px;
+  height: 14px;
 }
 
 .main:focus {
@@ -680,7 +709,7 @@ fieldset.card > legend + * {
   }
 
   .main {
-    padding: 24px 16px 80px;
+    padding: 24px 16px 20px;
   }
 
   .section-head,
