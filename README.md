@@ -70,6 +70,7 @@ Requirements: Node.js 20 or later.
 | ----------------------- | ------------------------------------------------------------------------------- |
 | `npm run build`         | Builds `dist/chromium` and `dist/firefox`                                       |
 | `npm run watch`         | Rebuilds the Chromium package on every change                                   |
+| `npm run watch:firefox` | Rebuilds the Firefox package on every change                                    |
 | `npm run start:firefox` | Builds and opens Firefox with the extension                                     |
 | `npm test`              | Runs the unit tests                                                             |
 | `npm run test:e2e`      | Runs the end-to-end tests in Chromium (needs `npx playwright install chromium`) |

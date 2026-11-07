@@ -30,7 +30,8 @@
     "check": "npm run lint && npm run format:check && npm run typecheck && npm run test && npm run build",
     "test:e2e": "playwright test",
     "lint:firefox": "npm run build:firefox && web-ext lint --source-dir dist/firefox",
-    "start:firefox": "npm run build:firefox && web-ext run --source-dir dist/firefox"
+    "start:firefox": "npm run build:firefox && web-ext run --source-dir dist/firefox",
+    "watch:firefox": "node scripts/build.mjs --target=firefox --watch"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

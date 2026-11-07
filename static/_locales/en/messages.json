@@ -81,6 +81,12 @@
   "stateUnsupported": {
     "message": "This page cannot be changed"
   },
+  "creditsBy": {
+    "message": "Made by"
+  },
+  "creditsSource": {
+    "message": "Source code"
+  },
   "popupSettings": {
     "message": "Settings"
   },

@@ -92,6 +92,23 @@ body {
   background: var(--surface-2);
 }
 
+.credits {
+  padding: 8px 14px 10px;
+  border-top: 1px solid var(--border);
+  color: var(--text-3);
+  font-size: 11px;
+}
+
+.credits a {
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+.credits a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
 .popup[data-inactive='true'] .site {
   opacity: 0.45;
 }

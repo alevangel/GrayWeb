@@ -74,6 +74,12 @@
   "stateUnsupported": {
     "message": "Questa pagina non si può modificare"
   },
+  "creditsBy": {
+    "message": "Creato da"
+  },
+  "creditsSource": {
+    "message": "Codice sorgente"
+  },
   "popupSettings": {
     "message": "Impostazioni"
   },

@@ -469,6 +469,11 @@ fieldset.card > legend + * {
   margin: 0;
 }
 
+.card a {
+  color: var(--text);
+  text-underline-offset: 2px;
+}
+
 .about-links {
   display: flex;
   flex-wrap: wrap;
