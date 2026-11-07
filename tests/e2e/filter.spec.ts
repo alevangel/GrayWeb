@@ -15,12 +15,34 @@ test.describe('filter on pages', () => {
   }) => {
     await setConfig({ rules: [rule('127.0.0.1')] });
     const page = await context.newPage();
-    await page.goto(`${server.url}/a`);
-    await expect
-      .poll(() =>
-        page.evaluate(() => (window as { filterAtFirstFrame?: string }).filterAtFirstFrame),
-      )
-      .toBe('grayscale(1)');
+    // Record when the filter style arrives and when the browser paints for the first time.
+    await page.addInitScript(() => {
+      const timing = { style: -1, paint: -1 };
+      (window as { timing?: typeof timing }).timing = timing;
+      const check = () => {
+        if (timing.style < 0 && document.getElementById('grayweb-filter') !== null) {
+          timing.style = performance.now();
+        }
+      };
+      check();
+      new MutationObserver(check).observe(document, { childList: true, subtree: true });
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-paint') timing.paint = entry.startTime;
+        }
+      }).observe({ type: 'paint', buffered: true });
+    });
+
+    for (let i = 0; i < 5; i += 1) {
+      await page.goto(`${server.url}/page-${i}`);
+      const timing = await page.waitForFunction(() => {
+        const value = (window as { timing?: { style: number; paint: number } }).timing;
+        return value !== undefined && value.paint >= 0 ? value : null;
+      });
+      const { style, paint } = (await timing.jsonValue()) as { style: number; paint: number };
+      expect(style, `page ${i}: the filter must exist`).toBeGreaterThanOrEqual(0);
+      expect(style, `page ${i}: the filter must arrive before the first paint`).toBeLessThan(paint);
+    }
   });
 
   test('updates open tabs when a setting changes (F-06, S-06)', async ({

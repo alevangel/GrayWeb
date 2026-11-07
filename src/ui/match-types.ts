@@ -34,6 +34,3 @@ export const MATCH_TYPE_INFO: Record<MatchType, MatchTypeInfo> = {
   contains: { label: 'matchContains', help: 'matchContainsHelp', example: 'casino' },
   path: { label: 'matchPath', help: 'matchPathHelp', example: '/admin' },
 };
-
-/** The match types that the popup offers for a new rule. */
-export const POPUP_MATCH_TYPES: MatchType[] = ['domain', 'host', 'prefix', 'exact'];

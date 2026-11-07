@@ -3,12 +3,6 @@ import type { AddressInfo } from 'node:net';
 
 const PAGE = (title: string, body = '') => `<!doctype html>
 <html><head><meta charset="utf-8"><title>${title}</title>
-<script>
-  // Record the filter before the first paint, to find a flash of color (F-02).
-  requestAnimationFrame(() => {
-    window.filterAtFirstFrame = getComputedStyle(document.documentElement).filter;
-  });
-</script>
 <style>body{margin:0;font:16px sans-serif}.hero{height:200px;background:linear-gradient(90deg,red,blue)}</style>
 </head><body><div class="hero"></div><h1>${title}</h1>${body}</body></html>`;
 

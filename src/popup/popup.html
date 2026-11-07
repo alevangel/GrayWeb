@@ -11,67 +11,47 @@
       <header class="header">
         <span class="mark" aria-hidden="true"></span>
         <h1 class="title">GrayWeb</h1>
-        <span class="header-state muted" id="global-state"></span>
-        <span id="global-switch-slot"></span>
-      </header>
-
-      <section class="site" aria-labelledby="site-host">
-        <div class="site-head">
-          <h2 class="site-host" id="site-host"></h2>
-          <span class="pill" id="site-status" aria-live="polite"></span>
-        </div>
-        <p class="site-rule hint" id="site-rule"></p>
-
-        <div class="site-actions" id="site-actions">
-          <button type="button" class="btn btn-primary" id="toggle-site"></button>
-          <label class="visually-hidden" for="match-type" data-i18n="popupMatchType"></label>
-          <select id="match-type" class="match-select"></select>
-        </div>
-        <p class="message message-warning" id="unsupported" hidden data-i18n="popupUnsupported"></p>
-      </section>
-
-      <section class="block" id="intensity-block" aria-labelledby="intensity-title">
-        <div class="block-head">
-          <h2 class="block-title" id="intensity-title"></h2>
-          <button
-            type="button"
-            class="link hint"
-            id="reset-site"
-            hidden
-            data-i18n="popupUseGlobal"
-          ></button>
-        </div>
-        <div id="intensity-slot"></div>
-      </section>
-
-      <section class="block" aria-labelledby="pause-title">
-        <div class="block-head">
-          <h2 class="block-title" id="pause-title" data-i18n="popupPause"></h2>
-          <span class="hint" id="pause-info" aria-live="polite"></span>
-        </div>
-        <div class="pause-row">
-          <button type="button" class="btn btn-sm" id="pause-tab"></button>
-          <div
-            class="segmented"
-            role="group"
-            data-i18n-attr="aria-label:popupPauseAll"
-            id="pause-all"
-          >
-            <button type="button" data-minutes="15" data-i18n="pause15m"></button>
-            <button type="button" data-minutes="60" data-i18n="pause1h"></button>
-            <button type="button" data-minutes="session" data-i18n="pauseSession"></button>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer">
         <button
           type="button"
-          class="btn btn-ghost btn-sm"
+          class="icon-btn"
           id="open-settings"
-          data-i18n="popupSettings"
-        ></button>
-        <span class="hint" id="shortcut-hint"></span>
+          data-i18n-attr="aria-label:popupSettings,title:popupSettings"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 7h9M17 7h3M4 17h3M11 17h9M15 5v4M9 15v4" />
+          </svg>
+        </button>
+      </header>
+
+      <section class="site">
+        <div class="site-row">
+          <span class="site-host" id="site-host"></span>
+          <span id="site-switch-slot"></span>
+        </div>
+        <div class="intensity" id="intensity" hidden>
+          <label for="intensity-input" data-i18n="setting_intensity"></label>
+          <output id="intensity-value" for="intensity-input"></output>
+          <input type="range" id="intensity-input" min="0" max="100" step="1" />
+        </div>
+      </section>
+
+      <footer class="footer" id="pause">
+        <span class="footer-label" data-i18n="popupPause"></span>
+        <button type="button" class="text-btn" data-pause="15" data-i18n="pause15m"></button>
+        <button type="button" class="text-btn" data-pause="60" data-i18n="pause1h"></button>
+        <button type="button" class="text-btn" data-pause="tab" data-i18n="pauseTab"></button>
+      </footer>
+
+      <footer class="footer" id="state" hidden>
+        <span class="footer-label" id="state-text"></span>
+        <button type="button" class="text-btn" id="state-action"></button>
       </footer>
     </main>
     <script src="popup.js"></script>

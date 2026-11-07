@@ -35,36 +35,17 @@
   "navAbout": {
     "message": "About"
   },
-  "stateOn": {
-    "message": "On",
-    "description": "Main switch state"
-  },
-  "stateOff": {
-    "message": "Off",
-    "description": "Main switch state"
-  },
   "statusGray": {
     "message": "Gray",
     "description": "Tab status"
   },
   "statusOff": {
-    "message": "Not gray",
+    "message": "In color",
     "description": "Tab status"
   },
   "statusPaused": {
     "message": "Paused",
     "description": "Tab status"
-  },
-  "statusDisabled": {
-    "message": "GrayWeb is off",
-    "description": "Tab status"
-  },
-  "statusUnsupported": {
-    "message": "Not available",
-    "description": "Tab status"
-  },
-  "popupGlobalSwitch": {
-    "message": "GrayWeb on all sites"
   },
   "popupNoPage": {
     "message": "This page"
@@ -72,73 +53,42 @@
   "popupLocalFile": {
     "message": "Local file"
   },
-  "popupUnsupported": {
-    "message": "The browser does not let extensions change this page."
-  },
-  "popupMatchType": {
-    "message": "Rule type"
-  },
-  "popupMakeGray": {
-    "message": "Make this site gray"
-  },
-  "popupRemoveGray": {
-    "message": "Remove gray from this site"
-  },
-  "popupRuleGray": {
-    "message": "Rule"
-  },
-  "popupRuleSkip": {
-    "message": "Exception"
-  },
-  "popupAllSitesMode": {
-    "message": "All sites are gray (mode: all sites)"
-  },
-  "popupIntensitySite": {
-    "message": "Intensity on this site"
-  },
-  "popupIntensityAll": {
-    "message": "Intensity on all sites"
-  },
-  "popupUseGlobal": {
-    "message": "Use global settings"
-  },
   "popupPause": {
     "message": "Pause"
   },
-  "popupPauseAll": {
-    "message": "Pause on all sites"
+  "resume": {
+    "message": "Resume"
   },
-  "popupPauseTab": {
+  "turnOn": {
+    "message": "Turn on"
+  },
+  "popupSiteSwitch": {
+    "message": "Gray on this site"
+  },
+  "pauseTab": {
     "message": "This tab"
   },
-  "popupResumeTab": {
-    "message": "Resume tab"
+  "stateDisabled": {
+    "message": "GrayWeb is off"
+  },
+  "statePausedUntil": {
+    "message": "Paused until $1",
+    "description": "$1 = time"
+  },
+  "statePausedTab": {
+    "message": "Paused on this tab"
+  },
+  "stateUnsupported": {
+    "message": "This page cannot be changed"
   },
   "popupSettings": {
     "message": "Settings"
-  },
-  "popupShortcut": {
-    "message": "$1 toggles this site",
-    "description": "$1 = keyboard shortcut"
   },
   "pause15m": {
     "message": "15 min"
   },
   "pause1h": {
-    "message": "1 h"
-  },
-  "pauseSession": {
-    "message": "Until restart"
-  },
-  "pauseInfoUntil": {
-    "message": "Paused until $1",
-    "description": "$1 = time"
-  },
-  "pauseInfoSession": {
-    "message": "Paused until the browser restarts"
-  },
-  "pauseInfoTab": {
-    "message": "This tab is paused"
+    "message": "1 hour"
   },
   "rulesIntro": {
     "message": "GrayWeb checks the rules from top to bottom. The first rule that matches the page decides."

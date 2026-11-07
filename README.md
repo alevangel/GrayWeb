@@ -8,7 +8,7 @@ Color is one of the strongest tools that websites use to hold your attention. A 
 - **Two modes.** Make only the listed sites gray, or make every site gray except your exceptions.
 - **Adjustable filter.** Set intensity, contrast and brightness for all sites, and override them for a single rule. Save your favourite values as presets.
 - **No flash of color.** The filter is in place before the page appears.
-- **Pause when you need it.** Pause one tab, all sites for 15 minutes or one hour, or until the browser restarts. Rules can also be active only on selected days and hours.
+- **Pause when you need it.** Pause the current tab, or all sites for 15 minutes or one hour. Rules can also be active only on selected days and hours.
 - **Private by design.** No data collection, no network requests, no remote code.
 - **English and Italian.**
 

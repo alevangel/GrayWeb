@@ -32,29 +32,14 @@
   "navAbout": {
     "message": "Informazioni"
   },
-  "stateOn": {
-    "message": "Attivo"
-  },
-  "stateOff": {
-    "message": "Spento"
-  },
   "statusGray": {
     "message": "In grigio"
   },
   "statusOff": {
-    "message": "Non in grigio"
+    "message": "A colori"
   },
   "statusPaused": {
     "message": "In pausa"
-  },
-  "statusDisabled": {
-    "message": "GrayWeb è spento"
-  },
-  "statusUnsupported": {
-    "message": "Non disponibile"
-  },
-  "popupGlobalSwitch": {
-    "message": "GrayWeb su tutti i siti"
   },
   "popupNoPage": {
     "message": "Questa pagina"
@@ -62,71 +47,41 @@
   "popupLocalFile": {
     "message": "File locale"
   },
-  "popupUnsupported": {
-    "message": "Il browser non permette alle estensioni di modificare questa pagina."
-  },
-  "popupMatchType": {
-    "message": "Tipo di regola"
-  },
-  "popupMakeGray": {
-    "message": "Rendi grigio questo sito"
-  },
-  "popupRemoveGray": {
-    "message": "Togli il grigio da questo sito"
-  },
-  "popupRuleGray": {
-    "message": "Regola"
-  },
-  "popupRuleSkip": {
-    "message": "Eccezione"
-  },
-  "popupAllSitesMode": {
-    "message": "Tutti i siti sono grigi (modalità: tutti i siti)"
-  },
-  "popupIntensitySite": {
-    "message": "Intensità su questo sito"
-  },
-  "popupIntensityAll": {
-    "message": "Intensità su tutti i siti"
-  },
-  "popupUseGlobal": {
-    "message": "Usa le impostazioni globali"
-  },
   "popupPause": {
     "message": "Pausa"
   },
-  "popupPauseAll": {
-    "message": "Pausa su tutti i siti"
+  "resume": {
+    "message": "Riprendi"
   },
-  "popupPauseTab": {
+  "turnOn": {
+    "message": "Attiva"
+  },
+  "popupSiteSwitch": {
+    "message": "Grigio su questo sito"
+  },
+  "pauseTab": {
     "message": "Questa scheda"
   },
-  "popupResumeTab": {
-    "message": "Riprendi scheda"
+  "stateDisabled": {
+    "message": "GrayWeb è spento"
+  },
+  "statePausedUntil": {
+    "message": "In pausa fino alle $1"
+  },
+  "statePausedTab": {
+    "message": "In pausa in questa scheda"
+  },
+  "stateUnsupported": {
+    "message": "Questa pagina non si può modificare"
   },
   "popupSettings": {
     "message": "Impostazioni"
-  },
-  "popupShortcut": {
-    "message": "$1 attiva o disattiva il sito"
   },
   "pause15m": {
     "message": "15 min"
   },
   "pause1h": {
-    "message": "1 h"
-  },
-  "pauseSession": {
-    "message": "Fino al riavvio"
-  },
-  "pauseInfoUntil": {
-    "message": "In pausa fino alle $1"
-  },
-  "pauseInfoSession": {
-    "message": "In pausa fino al riavvio del browser"
-  },
-  "pauseInfoTab": {
-    "message": "Questa scheda è in pausa"
+    "message": "1 ora"
   },
   "rulesIntro": {
     "message": "GrayWeb controlla le regole dall'alto verso il basso. Decide la prima regola che corrisponde alla pagina."

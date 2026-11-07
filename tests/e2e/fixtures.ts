@@ -93,6 +93,45 @@ export const test = base.extend<Fixtures>({
 
 export const expect = test.expect;
 
+/**
+ * Opens the popup in a tab. A real popup belongs to the window of the active tab.
+ * In a tab, the popup sees itself as the active tab, so the query returns the given tab.
+ */
+export async function openPopup(
+  context: BrowserContext,
+  extensionId: string,
+  tabId: number,
+): Promise<Page> {
+  const popup = await context.newPage();
+  await popup.addInitScript((id) => {
+    const scope = globalThis as { browser?: typeof chrome; chrome?: typeof chrome };
+    for (const namespace of [scope.browser, scope.chrome]) {
+      if (namespace?.tabs === undefined) continue;
+      const tabs = namespace.tabs;
+      const original = tabs.query.bind(tabs);
+      Object.defineProperty(tabs, 'query', {
+        configurable: true,
+        value: async (query: chrome.tabs.QueryInfo) => {
+          if (query.active !== true) return original(query);
+          return (await original({})).filter((tab) => tab.id === id);
+        },
+      });
+    }
+  }, tabId);
+  await popup.setViewportSize({ width: 340, height: 600 });
+  await popup.goto(`chrome-extension://${extensionId}/popup.html`);
+  return popup;
+}
+
+export async function tabIdOf(worker: Worker, url: string): Promise<number> {
+  const id = await worker.evaluate(
+    async (pattern) => (await chrome.tabs.query({ url: pattern }))[0]?.id,
+    `${url}/*`,
+  );
+  if (id === undefined) throw new Error(`No tab for ${url}`);
+  return id;
+}
+
 export function rootFilter(page: Page): Promise<string> {
   return page.evaluate(() => getComputedStyle(document.documentElement).filter);
 }

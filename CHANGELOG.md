@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Gray and exception rules, ordered by priority, with optional schedules.
 - Two modes: only listed sites, or all sites except exceptions.
 - Global intensity, contrast and brightness, with per-rule overrides and presets.
-- Popup to add or remove the current site, adjust its intensity and pause GrayWeb.
+- Minimal popup: one switch for the current site, its intensity, and pause controls.
 - Keyboard shortcut to toggle the current site.
 - Settings page with rule editor, URL tester, search, drag-and-drop ordering and undo.
 - Import, export, reset and synchronization with the browser account.

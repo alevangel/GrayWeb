@@ -20,42 +20,29 @@ import { isSupportedUrl } from '../shared/rules/url';
 import type { Config } from '../shared/types';
 
 const PAUSED_TABS_KEY = 'pausedTabs';
-const SESSION_PAUSE_KEY = 'sessionPause';
 const SYNC_DELAY_MS = 2000;
 
 // ---------------------------------------------------------------------------
-// Session state. `storage.session` keeps it when the worker stops, and the
-// browser clears it at restart (G-02, G-03).
+// Paused tabs (G-02). `storage.session` keeps them when the worker stops.
 // ---------------------------------------------------------------------------
 
-async function getSession(): Promise<{ tabs: number[]; session: boolean }> {
-  const data = await api.storage.session.get([PAUSED_TABS_KEY, SESSION_PAUSE_KEY]);
-  return {
-    tabs: (data[PAUSED_TABS_KEY] as number[] | undefined) ?? [],
-    session: data[SESSION_PAUSE_KEY] === true,
-  };
+async function getPausedTabs(): Promise<number[]> {
+  const data = await api.storage.session.get(PAUSED_TABS_KEY);
+  return (data[PAUSED_TABS_KEY] as number[] | undefined) ?? [];
 }
 
 async function setTabPaused(tabId: number, paused: boolean): Promise<void> {
-  const { tabs } = await getSession();
+  const tabs = await getPausedTabs();
   const next = paused ? [...new Set([...tabs, tabId])] : tabs.filter((id) => id !== tabId);
   await api.storage.session.set({ [PAUSED_TABS_KEY]: next });
   await sendTabState(tabId);
-}
-
-async function setSessionPaused(paused: boolean): Promise<void> {
-  await api.storage.session.set({ [SESSION_PAUSE_KEY]: paused });
-  const tabs = await api.tabs.query({});
-  const ids = tabs.map((tab) => tab.id).filter((id): id is number => id !== undefined);
-  await Promise.all(ids.map(sendTabState));
 }
 
 async function getTabState(
   tabId: number | undefined,
   topUrl: string | undefined,
 ): Promise<TabState> {
-  const session = await getSession();
-  const paused = session.session || (tabId !== undefined && session.tabs.includes(tabId));
+  const paused = tabId !== undefined && (await getPausedTabs()).includes(tabId);
   let topGray = false;
   if (!paused && topUrl !== undefined) {
     topGray = new RuleEngine(await loadConfig()).evaluate(topUrl).gray;
@@ -152,15 +139,9 @@ api.runtime.onMessage.addListener((raw: unknown, sender, sendResponse) => {
     case 'setTabPause':
       void setTabPaused(message.tabId, message.paused).then(() => sendResponse(true));
       return true;
-    case 'setSessionPause':
-      void setSessionPaused(message.paused).then(() => sendResponse(true));
-      return true;
     case 'getPauseState':
-      void getSession().then((session) => {
-        const state: PauseState = {
-          tab: session.tabs.includes(message.tabId),
-          session: session.session,
-        };
+      void getPausedTabs().then((tabs) => {
+        const state: PauseState = { tab: tabs.includes(message.tabId) };
         sendResponse(state);
       });
       return true;
@@ -175,7 +156,7 @@ api.tabs.onUpdated.addListener((tabId, changeInfo) => {
 });
 
 api.tabs.onRemoved.addListener((tabId) => {
-  void getSession().then(({ tabs }) => {
+  void getPausedTabs().then((tabs) => {
     if (tabs.includes(tabId)) {
       void api.storage.session.set({ [PAUSED_TABS_KEY]: tabs.filter((id) => id !== tabId) });
     }

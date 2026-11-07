@@ -71,26 +71,31 @@ describe('translations (L-01, L-04, L-06)', () => {
     expect(missing).toEqual([]);
   });
 
+  // Keys that the code builds from a name, for example `error_${result.error}`.
+  const dynamicKeys = [
+    ...MATCH_TYPES.flatMap((type) => {
+      const name = type.charAt(0).toUpperCase() + type.slice(1);
+      return [`match${name}`, `match${name}Help`];
+    }),
+    ...['empty', 'tooLong', 'invalidHost', 'invalidUrl', 'invalidPath', 'invalidRegex'].map(
+      (error) => `error_${error}`,
+    ),
+    ...['intensity', 'contrast', 'brightness'].map((key) => `setting_${key}`),
+    ...['soft', 'medium', 'full', 'dim'].map((key) => `preset_${key}`),
+    ...['testResultGray', 'testResultColor', 'testByMode', 'testNoRule'],
+    ...['modeNoteAll', 'modeNoteListed', 'editorNewTitle', 'editorEditTitle'],
+    ...['editorAgrees', 'editorDoesNotAgree', 'saveAnyway'],
+    ...['statusGray', 'statusOff', 'statusPaused'],
+    ...['syncOk', 'syncQuota', 'syncUnavailable', 'syncPending'],
+  ];
+
   it('contains the keys that the code builds at run time', () => {
-    const dynamic = [
-      ...MATCH_TYPES.flatMap((type) => {
-        const name = type.charAt(0).toUpperCase() + type.slice(1);
-        return [`match${name}`, `match${name}Help`];
-      }),
-      ...['empty', 'tooLong', 'invalidHost', 'invalidUrl', 'invalidPath', 'invalidRegex'].map(
-        (error) => `error_${error}`,
-      ),
-      ...['intensity', 'contrast', 'brightness'].map((key) => `setting_${key}`),
-      ...['soft', 'medium', 'full', 'dim'].map((key) => `preset_${key}`),
-      ...['popupRuleGray', 'popupRuleSkip', 'popupMakeGray', 'popupRemoveGray'],
-      ...['popupIntensitySite', 'popupIntensityAll', 'popupPauseTab', 'popupResumeTab'],
-      ...['testResultGray', 'testResultColor', 'testByMode', 'testNoRule'],
-      ...['modeNoteAll', 'modeNoteListed', 'editorNewTitle', 'editorEditTitle'],
-      ...['editorAgrees', 'editorDoesNotAgree', 'saveAnyway', 'stateOn', 'stateOff'],
-      ...['statusGray', 'statusOff', 'statusPaused', 'statusDisabled', 'statusUnsupported'],
-      ...['syncOk', 'syncQuota', 'syncUnavailable', 'syncPending'],
-    ];
-    expect(dynamic.filter((key) => !(key in english))).toEqual([]);
+    expect(dynamicKeys.filter((key) => !(key in english))).toEqual([]);
+  });
+
+  it('contains no key that the code does not use', () => {
+    const used = new Set([...usedKeys(), ...dynamicKeys]);
+    expect(Object.keys(english).filter((key) => !used.has(key))).toEqual([]);
   });
 
   it('keeps the store description short enough for the stores', () => {

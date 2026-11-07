@@ -7,11 +7,10 @@ export type BackgroundMessage =
   | { type: 'getTabState' }
   | { type: 'reportStatus'; status: TabStatus }
   | { type: 'setTabPause'; tabId: number; paused: boolean }
-  | { type: 'setSessionPause'; paused: boolean }
   | { type: 'getPauseState'; tabId: number };
 
 export interface TabState {
-  /** True when the tab or the browser session is paused. */
+  /** True when the tab is paused. */
   paused: boolean;
   /** True when the top frame of the tab is gray. Frames use it to prevent a double filter. */
   topGray: boolean;
@@ -19,7 +18,6 @@ export interface TabState {
 
 export interface PauseState {
   tab: boolean;
-  session: boolean;
 }
 
 /** Messages from the background worker or the popup to content scripts. */
