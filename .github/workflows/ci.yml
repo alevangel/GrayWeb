@@ -29,7 +29,7 @@ jobs:
       - run: npm run coverage
       - run: npm run build
       - run: npx web-ext lint --source-dir dist/firefox
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: packages
           path: dist/
@@ -47,7 +47,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps --no-shell chromium
       - run: npm run test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-results
