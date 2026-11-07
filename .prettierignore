@@ -1,0 +1,4 @@
+dist/
+coverage/
+safari/
+package-lock.json
