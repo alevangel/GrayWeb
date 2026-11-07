@@ -1,0 +1,26 @@
+# Changelog
+
+All notable changes to this project are documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/).
+
+## [Unreleased]
+
+## [1.0.0] - 2026-11-07
+
+### Added
+
+- Grayscale filter applied before the first paint, in all frames, with updates for single-page applications.
+- Rules with eight match types: domain, host, URL prefix, exact URL, wildcard, regular expression, contains text and path.
+- Gray and exception rules, ordered by priority, with optional schedules.
+- Two modes: only listed sites, or all sites except exceptions.
+- Global intensity, contrast and brightness, with per-rule overrides and presets.
+- Minimal popup: one switch for the current site, its intensity, and pause controls.
+- Keyboard shortcut to toggle the current site.
+- Settings page with rule editor, URL tester, search, drag-and-drop ordering and undo.
+- Import, export, reset and synchronization with the browser account.
+- English and Italian translations.
+- Packages for Chromium and Firefox.
+
+[Unreleased]: https://github.com/alevangel/GrayWeb/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/alevangel/GrayWeb/releases/tag/v1.0.0

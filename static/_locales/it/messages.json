@@ -1,0 +1,533 @@
+{
+  "extName": {
+    "message": "GrayWeb"
+  },
+  "extDescription": {
+    "message": "Mostra in scala di grigi i siti che scegli. Decidi tu i siti e il livello di grigio."
+  },
+  "commandToggleSite": {
+    "message": "Rendi grigio il sito corrente o togli il grigio"
+  },
+  "optionsTitle": {
+    "message": "Impostazioni di GrayWeb"
+  },
+  "skipToContent": {
+    "message": "Vai al contenuto"
+  },
+  "navLabel": {
+    "message": "Sezioni delle impostazioni"
+  },
+  "navRules": {
+    "message": "Regole"
+  },
+  "navAppearance": {
+    "message": "Aspetto"
+  },
+  "navGeneral": {
+    "message": "Generali"
+  },
+  "navBackup": {
+    "message": "Backup"
+  },
+  "navAbout": {
+    "message": "Informazioni"
+  },
+  "statusGray": {
+    "message": "In grigio"
+  },
+  "statusOff": {
+    "message": "A colori"
+  },
+  "statusPaused": {
+    "message": "In pausa"
+  },
+  "popupNoPage": {
+    "message": "Questa pagina"
+  },
+  "popupLocalFile": {
+    "message": "File locale"
+  },
+  "popupPause": {
+    "message": "Pausa"
+  },
+  "resume": {
+    "message": "Riprendi"
+  },
+  "turnOn": {
+    "message": "Attiva"
+  },
+  "popupSiteSwitch": {
+    "message": "Grigio su questo sito"
+  },
+  "pauseTab": {
+    "message": "Questa scheda"
+  },
+  "stateDisabled": {
+    "message": "GrayWeb è spento"
+  },
+  "statePausedUntil": {
+    "message": "In pausa fino alle $1"
+  },
+  "statePausedTab": {
+    "message": "In pausa in questa scheda"
+  },
+  "stateUnsupported": {
+    "message": "Questa pagina non si può modificare"
+  },
+  "creditsBy": {
+    "message": "di"
+  },
+  "popupSettings": {
+    "message": "Impostazioni"
+  },
+  "pause15m": {
+    "message": "15 min"
+  },
+  "pause1h": {
+    "message": "1 ora"
+  },
+  "rulesIntro": {
+    "message": "GrayWeb controlla le regole dall'alto verso il basso. Decide la prima regola che corrisponde alla pagina."
+  },
+  "rulesAdd": {
+    "message": "Aggiungi regola"
+  },
+  "modeNoteListed": {
+    "message": "Modalità: solo i siti in elenco sono grigi. Puoi cambiarla in Generali."
+  },
+  "modeNoteAll": {
+    "message": "Modalità: tutti i siti sono grigi, tranne le eccezioni. Puoi cambiarla in Generali."
+  },
+  "rulesTestLabel": {
+    "message": "Prova un URL"
+  },
+  "testInvalidUrl": {
+    "message": "Questo URL non è valido."
+  },
+  "testResultGray": {
+    "message": "Grigio"
+  },
+  "testResultColor": {
+    "message": "A colori"
+  },
+  "testByRule": {
+    "message": "regola $1 ($2)"
+  },
+  "testByMode": {
+    "message": "nessuna regola corrisponde, modalità tutti i siti"
+  },
+  "testNoRule": {
+    "message": "nessuna regola corrisponde"
+  },
+  "rulesSearch": {
+    "message": "Cerca nelle regole"
+  },
+  "rulesFilterType": {
+    "message": "Filtra per tipo"
+  },
+  "rulesFilterAction": {
+    "message": "Filtra per azione"
+  },
+  "filterAllTypes": {
+    "message": "Tutti i tipi"
+  },
+  "filterAllActions": {
+    "message": "Tutte le azioni"
+  },
+  "rulesReorderFiltered": {
+    "message": "Cancella la ricerca e i filtri per cambiare l'ordine delle regole."
+  },
+  "rulesEmptyTitle": {
+    "message": "Ancora nessuna regola"
+  },
+  "rulesEmptyText": {
+    "message": "Aggiungi una regola qui, oppure apri un sito e usa il pulsante di GrayWeb nella barra degli strumenti."
+  },
+  "rulesNoResults": {
+    "message": "Nessuna regola corrisponde alla ricerca."
+  },
+  "rulesMoveHandle": {
+    "message": "Sposta la regola. Usa i tasti freccia."
+  },
+  "rulesMoved": {
+    "message": "Regola spostata alla posizione $1"
+  },
+  "rulesEnabledLabel": {
+    "message": "Regola attiva: $1"
+  },
+  "rulesOwnSettings": {
+    "message": "Impostazioni proprie per questa regola"
+  },
+  "rulesScheduled": {
+    "message": "Attiva solo in orari selezionati"
+  },
+  "actionGray": {
+    "message": "Grigio"
+  },
+  "actionSkip": {
+    "message": "Eccezione"
+  },
+  "edit": {
+    "message": "Modifica"
+  },
+  "duplicate": {
+    "message": "Duplica"
+  },
+  "delete": {
+    "message": "Elimina"
+  },
+  "moveUp": {
+    "message": "Sposta su"
+  },
+  "moveDown": {
+    "message": "Sposta giù"
+  },
+  "undo": {
+    "message": "Annulla"
+  },
+  "cancel": {
+    "message": "Annulla"
+  },
+  "save": {
+    "message": "Salva"
+  },
+  "saveAnyway": {
+    "message": "Salva comunque"
+  },
+  "toastRuleRemoved": {
+    "message": "Regola eliminata"
+  },
+  "matchDomain": {
+    "message": "Dominio"
+  },
+  "matchDomainHelp": {
+    "message": "Corrisponde al dominio e a tutti i suoi sottodomini."
+  },
+  "matchHost": {
+    "message": "Host"
+  },
+  "matchHostHelp": {
+    "message": "Corrisponde solo a questo nome host, non agli altri sottodomini."
+  },
+  "matchPrefix": {
+    "message": "Inizio dell'URL"
+  },
+  "matchPrefixHelp": {
+    "message": "Corrisponde a tutti gli URL che iniziano con questo testo. Senza schema valgono sia http sia https."
+  },
+  "matchExact": {
+    "message": "URL esatto"
+  },
+  "matchExactHelp": {
+    "message": "Corrisponde solo a questa pagina. Query e frammento vengono ignorati."
+  },
+  "matchWildcard": {
+    "message": "Carattere jolly"
+  },
+  "matchWildcardHelp": {
+    "message": "* corrisponde a qualsiasi testo, ? a un solo carattere. Deve corrispondere l'intero URL."
+  },
+  "matchRegex": {
+    "message": "Espressione regolare"
+  },
+  "matchRegexHelp": {
+    "message": "Espressione regolare JavaScript, verificata sull'URL completo."
+  },
+  "matchContains": {
+    "message": "Contiene testo"
+  },
+  "matchContainsHelp": {
+    "message": "Corrisponde a tutti gli URL che contengono questo testo. Maiuscole e minuscole sono uguali."
+  },
+  "matchPath": {
+    "message": "Percorso"
+  },
+  "matchPathHelp": {
+    "message": "Corrisponde a questo percorso e alle sue sottocartelle, su qualsiasi sito."
+  },
+  "editorNewTitle": {
+    "message": "Nuova regola"
+  },
+  "editorEditTitle": {
+    "message": "Modifica regola"
+  },
+  "editorAction": {
+    "message": "Azione"
+  },
+  "editorMatchType": {
+    "message": "Tipo"
+  },
+  "editorPattern": {
+    "message": "Modello"
+  },
+  "editorExample": {
+    "message": "Esempio: $1"
+  },
+  "editorIgnoreCase": {
+    "message": "Ignora maiuscole e minuscole"
+  },
+  "editorIgnoreCaseShort": {
+    "message": "ignora maiuscole"
+  },
+  "editorTest": {
+    "message": "URL di prova"
+  },
+  "editorAgrees": {
+    "message": "Corrisponde"
+  },
+  "editorDoesNotAgree": {
+    "message": "Non corrisponde"
+  },
+  "editorOpenTabs": {
+    "message": "Schede aperte che corrispondono"
+  },
+  "editorMoreTabs": {
+    "message": "e altre $1"
+  },
+  "editorLabel": {
+    "message": "Nome (facoltativo)"
+  },
+  "editorLabelPlaceholder": {
+    "message": "Per esempio: Social"
+  },
+  "editorOwnSettings": {
+    "message": "Usa impostazioni proprie per questa regola"
+  },
+  "editorSchedule": {
+    "message": "Attiva solo in orari selezionati"
+  },
+  "editorDays": {
+    "message": "Giorni"
+  },
+  "editorFrom": {
+    "message": "Dalle"
+  },
+  "editorTo": {
+    "message": "Alle"
+  },
+  "editorNoDays": {
+    "message": "Seleziona almeno un giorno."
+  },
+  "editorDuplicate": {
+    "message": "Esiste già una regola uguale: $1"
+  },
+  "editorSlowRegex": {
+    "message": "Questa espressione regolare è molto lenta con alcuni URL. Può rallentare le pagine."
+  },
+  "error_empty": {
+    "message": "Scrivi un modello."
+  },
+  "error_tooLong": {
+    "message": "Il modello è troppo lungo (massimo 500 caratteri)."
+  },
+  "error_invalidHost": {
+    "message": "Questo non è un nome host valido."
+  },
+  "error_invalidUrl": {
+    "message": "Questo non è un URL valido."
+  },
+  "error_invalidPath": {
+    "message": "Il percorso deve iniziare con / e non deve contenere spazi, ? o #."
+  },
+  "error_invalidRegex": {
+    "message": "Questa espressione regolare non è valida."
+  },
+  "setting_intensity": {
+    "message": "Intensità"
+  },
+  "setting_contrast": {
+    "message": "Contrasto"
+  },
+  "setting_brightness": {
+    "message": "Luminosità"
+  },
+  "appearanceIntro": {
+    "message": "Queste impostazioni valgono per tutti i siti. Una regola può avere impostazioni proprie."
+  },
+  "appearanceGlobal": {
+    "message": "Impostazioni globali"
+  },
+  "appearanceResetDefaults": {
+    "message": "Ripristina i valori predefiniti"
+  },
+  "appearancePreview": {
+    "message": "Anteprima"
+  },
+  "previewHeading": {
+    "message": "Una pagina colorata"
+  },
+  "previewText": {
+    "message": "Immagini, pulsanti e testo mostrano il risultato delle impostazioni."
+  },
+  "previewButton": {
+    "message": "Pulsante"
+  },
+  "presetsTitle": {
+    "message": "Preimpostazioni"
+  },
+  "presetsIntro": {
+    "message": "Applica una preimpostazione alle impostazioni globali, oppure salva i valori attuali come nuova preimpostazione."
+  },
+  "presetsName": {
+    "message": "Nome della preimpostazione"
+  },
+  "presetsSave": {
+    "message": "Salva i valori attuali"
+  },
+  "presetsDelete": {
+    "message": "Elimina la preimpostazione $1"
+  },
+  "preset_soft": {
+    "message": "Leggero"
+  },
+  "preset_medium": {
+    "message": "Medio"
+  },
+  "preset_full": {
+    "message": "Pieno"
+  },
+  "preset_dim": {
+    "message": "Attenuato"
+  },
+  "generalEnabled": {
+    "message": "GrayWeb attivo"
+  },
+  "generalEnabledHelp": {
+    "message": "Quando è spento, GrayWeb non modifica nessuna pagina."
+  },
+  "generalMode": {
+    "message": "Modalità"
+  },
+  "modeListed": {
+    "message": "Solo i siti in elenco"
+  },
+  "modeListedHelp": {
+    "message": "I siti sono grigi solo se una regola corrisponde."
+  },
+  "modeAll": {
+    "message": "Tutti i siti tranne le eccezioni"
+  },
+  "modeAllHelp": {
+    "message": "Tutti i siti sono grigi. Usa le regole di eccezione per i siti che devono restare a colori."
+  },
+  "generalLanguage": {
+    "message": "Lingua"
+  },
+  "generalLanguageHelp": {
+    "message": "La lingua dell'interfaccia di GrayWeb."
+  },
+  "languageAuto": {
+    "message": "Come il browser"
+  },
+  "generalShortcut": {
+    "message": "Scorciatoia da tastiera"
+  },
+  "generalShortcutValue": {
+    "message": "$1 rende grigio il sito corrente o toglie il grigio."
+  },
+  "generalShortcutNone": {
+    "message": "Nessuna scorciatoia impostata."
+  },
+  "generalShortcutFirefox": {
+    "message": "Per cambiarla, apri il gestore dei componenti aggiuntivi e scegli Gestisci scorciatoie estensioni."
+  },
+  "generalShortcutChange": {
+    "message": "Modifica"
+  },
+  "syncTitle": {
+    "message": "Sincronizzazione"
+  },
+  "syncOk": {
+    "message": "Le impostazioni sono sincronizzate con il tuo account del browser."
+  },
+  "syncQuota": {
+    "message": "Le impostazioni sono troppo grandi per la sincronizzazione. Restano solo su questo dispositivo."
+  },
+  "syncUnavailable": {
+    "message": "La sincronizzazione non è disponibile. Le impostazioni restano solo su questo dispositivo."
+  },
+  "syncPending": {
+    "message": "La sincronizzazione parte dopo la prima modifica."
+  },
+  "exportTitle": {
+    "message": "Esporta"
+  },
+  "exportHelp": {
+    "message": "Salva regole e impostazioni in un file JSON."
+  },
+  "exportButton": {
+    "message": "Esporta file"
+  },
+  "importTitle": {
+    "message": "Importa"
+  },
+  "importHelp": {
+    "message": "Carica regole e impostazioni da un file JSON."
+  },
+  "importButton": {
+    "message": "Scegli file"
+  },
+  "importSummary": {
+    "message": "Il file contiene $1 regole e $2 preimpostazioni."
+  },
+  "importChoice": {
+    "message": "Sostituisci elimina le regole attuali. Unisci aggiunge solo le regole nuove."
+  },
+  "importReplace": {
+    "message": "Sostituisci"
+  },
+  "importMerge": {
+    "message": "Unisci"
+  },
+  "importDone": {
+    "message": "Importazione completata"
+  },
+  "importInvalid": {
+    "message": "Il file non è valido: $1"
+  },
+  "importNotJson": {
+    "message": "non è un file JSON"
+  },
+  "resetTitle": {
+    "message": "Ripristina"
+  },
+  "resetHelp": {
+    "message": "Elimina tutte le regole e le preimpostazioni e usa le impostazioni predefinite."
+  },
+  "resetButton": {
+    "message": "Ripristina tutto"
+  },
+  "resetConfirm": {
+    "message": "Tutte le regole e le preimpostazioni verranno eliminate. Se ti servono, esporta prima un backup."
+  },
+  "resetDone": {
+    "message": "Impostazioni ripristinate"
+  },
+  "aboutText": {
+    "message": "Estensione open source rilasciata con licenza MIT."
+  },
+  "aboutSource": {
+    "message": "Codice sorgente"
+  },
+  "aboutIssues": {
+    "message": "Segnala un problema"
+  },
+  "aboutLicense": {
+    "message": "Licenza"
+  },
+  "privacyTitle": {
+    "message": "Privacy"
+  },
+  "privacyText": {
+    "message": "GrayWeb non raccoglie, conserva o invia alcun dato. Non fa richieste di rete. Le tue regole restano nel browser e, se la usi, nella sincronizzazione del tuo account del browser."
+  },
+  "permissionsTitle": {
+    "message": "Permessi"
+  },
+  "permissionStorage": {
+    "message": "Conserva regole e impostazioni."
+  },
+  "permissionHosts": {
+    "message": "Applica il filtro prima che la pagina compaia, così non vedi un lampo di colore. GrayWeb non legge il contenuto delle pagine."
+  }
+}

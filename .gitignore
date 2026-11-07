@@ -26,3 +26,9 @@ Thumbs.db
 # Environment
 .env
 .env.*
+safari/
+
+# Test results
+test-results/
+playwright-report/
+web-ext-artifacts/

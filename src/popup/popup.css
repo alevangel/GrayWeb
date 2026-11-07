@@ -1,0 +1,110 @@
+@import '../ui/base.css';
+
+body {
+  width: 300px;
+  font-size: 13px;
+  background: var(--surface);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 8px 10px 14px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.header .icon-btn {
+  margin-left: auto;
+}
+
+.site {
+  display: grid;
+  gap: 16px;
+  padding: 6px 14px 18px;
+}
+
+.site-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.site-host {
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-row .switch {
+  transform: scale(1.15);
+  transform-origin: right center;
+}
+
+.intensity {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px;
+  color: var(--text-2);
+}
+
+.intensity output {
+  font-variant-numeric: tabular-nums;
+}
+
+.intensity input {
+  grid-column: 1 / -1;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px 8px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-label {
+  margin-right: auto;
+  color: var(--text-2);
+}
+
+.text-btn {
+  padding: 4px 6px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.text-btn:hover {
+  background: var(--surface-2);
+}
+
+.credits {
+  display: block;
+  padding: 0 14px 10px;
+  color: var(--text-3);
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.credits:hover {
+  color: var(--text-2);
+}
+
+.popup[data-inactive='true'] .site {
+  opacity: 0.45;
+}

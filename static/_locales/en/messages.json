@@ -1,0 +1,552 @@
+{
+  "extName": {
+    "message": "GrayWeb",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Show selected websites in grayscale. Choose the sites and the level of gray.",
+    "description": "Store description"
+  },
+  "commandToggleSite": {
+    "message": "Make the current site gray or remove the gray",
+    "description": "Keyboard shortcut description"
+  },
+  "optionsTitle": {
+    "message": "GrayWeb settings"
+  },
+  "skipToContent": {
+    "message": "Skip to content"
+  },
+  "navLabel": {
+    "message": "Settings sections"
+  },
+  "navRules": {
+    "message": "Rules"
+  },
+  "navAppearance": {
+    "message": "Appearance"
+  },
+  "navGeneral": {
+    "message": "General"
+  },
+  "navBackup": {
+    "message": "Backup"
+  },
+  "navAbout": {
+    "message": "About"
+  },
+  "statusGray": {
+    "message": "Gray",
+    "description": "Tab status"
+  },
+  "statusOff": {
+    "message": "In color",
+    "description": "Tab status"
+  },
+  "statusPaused": {
+    "message": "Paused",
+    "description": "Tab status"
+  },
+  "popupNoPage": {
+    "message": "This page"
+  },
+  "popupLocalFile": {
+    "message": "Local file"
+  },
+  "popupPause": {
+    "message": "Pause"
+  },
+  "resume": {
+    "message": "Resume"
+  },
+  "turnOn": {
+    "message": "Turn on"
+  },
+  "popupSiteSwitch": {
+    "message": "Gray on this site"
+  },
+  "pauseTab": {
+    "message": "This tab"
+  },
+  "stateDisabled": {
+    "message": "GrayWeb is off"
+  },
+  "statePausedUntil": {
+    "message": "Paused until $1",
+    "description": "$1 = time"
+  },
+  "statePausedTab": {
+    "message": "Paused on this tab"
+  },
+  "stateUnsupported": {
+    "message": "This page cannot be changed"
+  },
+  "creditsBy": {
+    "message": "by"
+  },
+  "popupSettings": {
+    "message": "Settings"
+  },
+  "pause15m": {
+    "message": "15 min"
+  },
+  "pause1h": {
+    "message": "1 hour"
+  },
+  "rulesIntro": {
+    "message": "GrayWeb checks the rules from top to bottom. The first rule that matches the page decides."
+  },
+  "rulesAdd": {
+    "message": "Add rule"
+  },
+  "modeNoteListed": {
+    "message": "Mode: only the listed sites are gray. Change it in General."
+  },
+  "modeNoteAll": {
+    "message": "Mode: all sites are gray, except the exceptions. Change it in General."
+  },
+  "rulesTestLabel": {
+    "message": "Test a URL"
+  },
+  "testInvalidUrl": {
+    "message": "This URL is not valid."
+  },
+  "testResultGray": {
+    "message": "Gray"
+  },
+  "testResultColor": {
+    "message": "In color"
+  },
+  "testByRule": {
+    "message": "rule $1 ($2)",
+    "description": "$1 = position, $2 = pattern"
+  },
+  "testByMode": {
+    "message": "no rule matches, mode is all sites"
+  },
+  "testNoRule": {
+    "message": "no rule matches"
+  },
+  "rulesSearch": {
+    "message": "Search rules"
+  },
+  "rulesFilterType": {
+    "message": "Filter by type"
+  },
+  "rulesFilterAction": {
+    "message": "Filter by action"
+  },
+  "filterAllTypes": {
+    "message": "All types"
+  },
+  "filterAllActions": {
+    "message": "All actions"
+  },
+  "rulesReorderFiltered": {
+    "message": "Clear the search and the filters to change the order of the rules."
+  },
+  "rulesEmptyTitle": {
+    "message": "No rules yet"
+  },
+  "rulesEmptyText": {
+    "message": "Add a rule here, or open a website and use the GrayWeb button in the toolbar."
+  },
+  "rulesNoResults": {
+    "message": "No rules match the search."
+  },
+  "rulesMoveHandle": {
+    "message": "Move rule. Use the arrow keys."
+  },
+  "rulesMoved": {
+    "message": "Rule moved to position $1",
+    "description": "$1 = position"
+  },
+  "rulesEnabledLabel": {
+    "message": "Rule active: $1",
+    "description": "$1 = pattern"
+  },
+  "rulesOwnSettings": {
+    "message": "Own settings for this rule"
+  },
+  "rulesScheduled": {
+    "message": "Active only at selected times"
+  },
+  "actionGray": {
+    "message": "Gray",
+    "description": "Rule action"
+  },
+  "actionSkip": {
+    "message": "Exception",
+    "description": "Rule action"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "duplicate": {
+    "message": "Duplicate"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "moveUp": {
+    "message": "Move up"
+  },
+  "moveDown": {
+    "message": "Move down"
+  },
+  "undo": {
+    "message": "Undo"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "saveAnyway": {
+    "message": "Save anyway"
+  },
+  "toastRuleRemoved": {
+    "message": "Rule deleted"
+  },
+  "matchDomain": {
+    "message": "Domain"
+  },
+  "matchDomainHelp": {
+    "message": "Matches the domain and all its subdomains."
+  },
+  "matchHost": {
+    "message": "Host"
+  },
+  "matchHostHelp": {
+    "message": "Matches this host name only, not other subdomains."
+  },
+  "matchPrefix": {
+    "message": "URL prefix"
+  },
+  "matchPrefixHelp": {
+    "message": "Matches all URLs that start with this text. Without a scheme, http and https both match."
+  },
+  "matchExact": {
+    "message": "Exact URL"
+  },
+  "matchExactHelp": {
+    "message": "Matches this page only. The query and the fragment are ignored."
+  },
+  "matchWildcard": {
+    "message": "Wildcard"
+  },
+  "matchWildcardHelp": {
+    "message": "* matches any text, ? matches one character. The full URL must match."
+  },
+  "matchRegex": {
+    "message": "Regular expression"
+  },
+  "matchRegexHelp": {
+    "message": "JavaScript regular expression, tested on the full URL."
+  },
+  "matchContains": {
+    "message": "Contains text"
+  },
+  "matchContainsHelp": {
+    "message": "Matches all URLs that contain this text. Uppercase and lowercase are the same."
+  },
+  "matchPath": {
+    "message": "Path"
+  },
+  "matchPathHelp": {
+    "message": "Matches this path and its subfolders on any site."
+  },
+  "editorNewTitle": {
+    "message": "New rule"
+  },
+  "editorEditTitle": {
+    "message": "Edit rule"
+  },
+  "editorAction": {
+    "message": "Action"
+  },
+  "editorMatchType": {
+    "message": "Type"
+  },
+  "editorPattern": {
+    "message": "Pattern"
+  },
+  "editorExample": {
+    "message": "Example: $1",
+    "description": "$1 = example pattern"
+  },
+  "editorIgnoreCase": {
+    "message": "Ignore uppercase and lowercase"
+  },
+  "editorIgnoreCaseShort": {
+    "message": "ignore case"
+  },
+  "editorTest": {
+    "message": "Test URL"
+  },
+  "editorAgrees": {
+    "message": "Matches"
+  },
+  "editorDoesNotAgree": {
+    "message": "Does not match"
+  },
+  "editorOpenTabs": {
+    "message": "Open tabs that match"
+  },
+  "editorMoreTabs": {
+    "message": "and $1 more",
+    "description": "$1 = number"
+  },
+  "editorLabel": {
+    "message": "Name (optional)"
+  },
+  "editorLabelPlaceholder": {
+    "message": "For example: Social media"
+  },
+  "editorOwnSettings": {
+    "message": "Use own settings for this rule"
+  },
+  "editorSchedule": {
+    "message": "Active only at selected times"
+  },
+  "editorDays": {
+    "message": "Days"
+  },
+  "editorFrom": {
+    "message": "From"
+  },
+  "editorTo": {
+    "message": "To"
+  },
+  "editorNoDays": {
+    "message": "Select one or more days."
+  },
+  "editorDuplicate": {
+    "message": "An equal rule exists already: $1",
+    "description": "$1 = pattern"
+  },
+  "editorSlowRegex": {
+    "message": "This regular expression is very slow on some URLs. It can make pages slow."
+  },
+  "error_empty": {
+    "message": "Write a pattern."
+  },
+  "error_tooLong": {
+    "message": "The pattern is too long (maximum 500 characters)."
+  },
+  "error_invalidHost": {
+    "message": "This is not a valid host name."
+  },
+  "error_invalidUrl": {
+    "message": "This is not a valid URL."
+  },
+  "error_invalidPath": {
+    "message": "The path must start with / and must not contain spaces, ? or #."
+  },
+  "error_invalidRegex": {
+    "message": "This regular expression is not valid."
+  },
+  "setting_intensity": {
+    "message": "Intensity"
+  },
+  "setting_contrast": {
+    "message": "Contrast"
+  },
+  "setting_brightness": {
+    "message": "Brightness"
+  },
+  "appearanceIntro": {
+    "message": "These settings apply to all sites. A rule can have its own settings."
+  },
+  "appearanceGlobal": {
+    "message": "Global settings"
+  },
+  "appearanceResetDefaults": {
+    "message": "Reset to default values"
+  },
+  "appearancePreview": {
+    "message": "Preview"
+  },
+  "previewHeading": {
+    "message": "A colorful page"
+  },
+  "previewText": {
+    "message": "Images, buttons and text show the result of the settings."
+  },
+  "previewButton": {
+    "message": "Button"
+  },
+  "presetsTitle": {
+    "message": "Presets"
+  },
+  "presetsIntro": {
+    "message": "Apply a preset to the global settings, or save the current values as a new preset."
+  },
+  "presetsName": {
+    "message": "Preset name"
+  },
+  "presetsSave": {
+    "message": "Save current values"
+  },
+  "presetsDelete": {
+    "message": "Delete preset $1",
+    "description": "$1 = name"
+  },
+  "preset_soft": {
+    "message": "Soft"
+  },
+  "preset_medium": {
+    "message": "Medium"
+  },
+  "preset_full": {
+    "message": "Full"
+  },
+  "preset_dim": {
+    "message": "Dim"
+  },
+  "generalEnabled": {
+    "message": "GrayWeb on"
+  },
+  "generalEnabledHelp": {
+    "message": "When off, GrayWeb does not change any page."
+  },
+  "generalMode": {
+    "message": "Mode"
+  },
+  "modeListed": {
+    "message": "Only listed sites"
+  },
+  "modeListedHelp": {
+    "message": "Sites are gray only when a rule matches them."
+  },
+  "modeAll": {
+    "message": "All sites except exceptions"
+  },
+  "modeAllHelp": {
+    "message": "All sites are gray. Use exception rules for the sites that must stay in color."
+  },
+  "generalLanguage": {
+    "message": "Language"
+  },
+  "generalLanguageHelp": {
+    "message": "The language of the GrayWeb interface."
+  },
+  "languageAuto": {
+    "message": "Same as the browser"
+  },
+  "generalShortcut": {
+    "message": "Keyboard shortcut"
+  },
+  "generalShortcutValue": {
+    "message": "$1 makes the current site gray or removes the gray.",
+    "description": "$1 = shortcut"
+  },
+  "generalShortcutNone": {
+    "message": "No shortcut is set."
+  },
+  "generalShortcutFirefox": {
+    "message": "To change it, open the add-ons manager and select Manage Extension Shortcuts."
+  },
+  "generalShortcutChange": {
+    "message": "Change"
+  },
+  "syncTitle": {
+    "message": "Synchronization"
+  },
+  "syncOk": {
+    "message": "Your settings are synchronized with your browser account."
+  },
+  "syncQuota": {
+    "message": "Your settings are too large to synchronize. They are kept on this device only."
+  },
+  "syncUnavailable": {
+    "message": "Synchronization is not available. Your settings are kept on this device only."
+  },
+  "syncPending": {
+    "message": "Synchronization starts after the first change."
+  },
+  "exportTitle": {
+    "message": "Export"
+  },
+  "exportHelp": {
+    "message": "Save your rules and settings in a JSON file."
+  },
+  "exportButton": {
+    "message": "Export file"
+  },
+  "importTitle": {
+    "message": "Import"
+  },
+  "importHelp": {
+    "message": "Load rules and settings from a JSON file."
+  },
+  "importButton": {
+    "message": "Choose file"
+  },
+  "importSummary": {
+    "message": "The file contains $1 rules and $2 presets.",
+    "description": "$1, $2 = numbers"
+  },
+  "importChoice": {
+    "message": "Replace removes your current rules. Merge adds only the new rules."
+  },
+  "importReplace": {
+    "message": "Replace"
+  },
+  "importMerge": {
+    "message": "Merge"
+  },
+  "importDone": {
+    "message": "Import complete"
+  },
+  "importInvalid": {
+    "message": "The file is not valid: $1",
+    "description": "$1 = reason"
+  },
+  "importNotJson": {
+    "message": "it is not a JSON file"
+  },
+  "resetTitle": {
+    "message": "Reset"
+  },
+  "resetHelp": {
+    "message": "Delete all rules and presets and use the default settings."
+  },
+  "resetButton": {
+    "message": "Reset everything"
+  },
+  "resetConfirm": {
+    "message": "All rules and presets will be deleted. Export a backup first if you need them."
+  },
+  "resetDone": {
+    "message": "Settings reset"
+  },
+  "aboutText": {
+    "message": "Open-source extension released under the MIT license."
+  },
+  "aboutSource": {
+    "message": "Source code"
+  },
+  "aboutIssues": {
+    "message": "Report a problem"
+  },
+  "aboutLicense": {
+    "message": "License"
+  },
+  "privacyTitle": {
+    "message": "Privacy"
+  },
+  "privacyText": {
+    "message": "GrayWeb does not collect, keep or send any data. It makes no network requests. Your rules stay in your browser and, if you use it, in the synchronization of your browser account."
+  },
+  "permissionsTitle": {
+    "message": "Permissions"
+  },
+  "permissionStorage": {
+    "message": "Keeps your rules and settings."
+  },
+  "permissionHosts": {
+    "message": "Applies the filter before the page appears, so you do not see a flash of color. GrayWeb does not read the content of pages."
+  }
+}

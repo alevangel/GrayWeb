@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GrayWeb</title>
+    <link rel="stylesheet" href="popup-style.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <span class="mark" aria-hidden="true"></span>
+        <h1 class="title">GrayWeb</h1>
+        <button
+          type="button"
+          class="icon-btn"
+          id="open-settings"
+          data-i18n-attr="aria-label:popupSettings,title:popupSettings"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 7h9M17 7h3M4 17h3M11 17h9M15 5v4M9 15v4" />
+          </svg>
+        </button>
+      </header>
+
+      <section class="site">
+        <div class="site-row">
+          <span class="site-host" id="site-host"></span>
+          <span id="site-switch-slot"></span>
+        </div>
+        <div class="intensity" id="intensity" hidden>
+          <label for="intensity-input" data-i18n="setting_intensity"></label>
+          <output id="intensity-value" for="intensity-input"></output>
+          <input type="range" id="intensity-input" min="0" max="100" step="1" />
+        </div>
+      </section>
+
+      <footer class="footer" id="pause">
+        <span class="footer-label" data-i18n="popupPause"></span>
+        <button type="button" class="text-btn" data-pause="15" data-i18n="pause15m"></button>
+        <button type="button" class="text-btn" data-pause="60" data-i18n="pause1h"></button>
+        <button type="button" class="text-btn" data-pause="tab" data-i18n="pauseTab"></button>
+      </footer>
+
+      <footer class="footer" id="state" hidden>
+        <span class="footer-label" id="state-text"></span>
+        <button type="button" class="text-btn" id="state-action"></button>
+      </footer>
+      <a class="credits" href="https://github.com/alevangel/GrayWeb" target="_blank" rel="noopener">
+        <span data-i18n="creditsBy"></span> Alessandro Evangelista
+      </a>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
