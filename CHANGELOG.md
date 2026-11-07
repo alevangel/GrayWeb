@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-07
+
 ### Added
 
 - Grayscale filter applied before the first paint, in all frames, with updates for single-page applications.
@@ -19,3 +21,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Import, export, reset and synchronization with the browser account.
 - English and Italian translations.
 - Packages for Chromium and Firefox.
+
+[Unreleased]: https://github.com/alevangel/GrayWeb/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/alevangel/GrayWeb/releases/tag/v1.0.0

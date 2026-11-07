@@ -1,6 +1,6 @@
 {
   "name": "grayweb",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Browser extension that shows selected websites in grayscale.",
   "license": "MIT",
   "author": "Alessandro Evangelista",
