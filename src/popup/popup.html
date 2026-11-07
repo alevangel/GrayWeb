@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GrayWeb</title>
+    <link rel="stylesheet" href="popup-style.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <span class="mark" aria-hidden="true"></span>
+        <h1 class="title">GrayWeb</h1>
+        <span class="header-state muted" id="global-state"></span>
+        <span id="global-switch-slot"></span>
+      </header>
+
+      <section class="site" aria-labelledby="site-host">
+        <div class="site-head">
+          <h2 class="site-host" id="site-host"></h2>
+          <span class="pill" id="site-status" aria-live="polite"></span>
+        </div>
+        <p class="site-rule hint" id="site-rule"></p>
+
+        <div class="site-actions" id="site-actions">
+          <button type="button" class="btn btn-primary" id="toggle-site"></button>
+          <label class="visually-hidden" for="match-type" data-i18n="popupMatchType"></label>
+          <select id="match-type" class="match-select"></select>
+        </div>
+        <p class="message message-warning" id="unsupported" hidden data-i18n="popupUnsupported"></p>
+      </section>
+
+      <section class="block" id="intensity-block" aria-labelledby="intensity-title">
+        <div class="block-head">
+          <h2 class="block-title" id="intensity-title"></h2>
+          <button
+            type="button"
+            class="link hint"
+            id="reset-site"
+            hidden
+            data-i18n="popupUseGlobal"
+          ></button>
+        </div>
+        <div id="intensity-slot"></div>
+      </section>
+
+      <section class="block" aria-labelledby="pause-title">
+        <div class="block-head">
+          <h2 class="block-title" id="pause-title" data-i18n="popupPause"></h2>
+          <span class="hint" id="pause-info" aria-live="polite"></span>
+        </div>
+        <div class="pause-row">
+          <button type="button" class="btn btn-sm" id="pause-tab"></button>
+          <div
+            class="segmented"
+            role="group"
+            data-i18n-attr="aria-label:popupPauseAll"
+            id="pause-all"
+          >
+            <button type="button" data-minutes="15" data-i18n="pause15m"></button>
+            <button type="button" data-minutes="60" data-i18n="pause1h"></button>
+            <button type="button" data-minutes="session" data-i18n="pauseSession"></button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <button
+          type="button"
+          class="btn btn-ghost btn-sm"
+          id="open-settings"
+          data-i18n="popupSettings"
+        ></button>
+        <span class="hint" id="shortcut-hint"></span>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

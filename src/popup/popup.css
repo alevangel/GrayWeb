@@ -1,0 +1,143 @@
+@import '../ui/base.css';
+
+body {
+  width: 340px;
+  font-size: 13px;
+  background: var(--surface);
+}
+
+.popup {
+  display: grid;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.header-state {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.site {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.site-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.site-host {
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-rule {
+  margin-top: -4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-rule:empty {
+  display: none;
+}
+
+.site-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.site-actions .btn {
+  min-height: 36px;
+}
+
+.match-select {
+  width: auto;
+  min-height: 36px;
+  font-size: 12px;
+}
+
+.block {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.block-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.pause-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+}
+
+.pause-row .btn {
+  min-height: 30px;
+}
+
+.pause-row .segmented {
+  display: flex;
+}
+
+.pause-row .segmented button {
+  flex: 1;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+
+.pause-row .btn[aria-pressed='true'] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px 8px;
+  border-top: 1px solid var(--border);
+}
+
+.footer .hint {
+  padding-right: 6px;
+}
+
+.popup[data-disabled='true'] .site,
+.popup[data-disabled='true'] .block {
+  opacity: 0.5;
+}

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="optionsTitle">GrayWeb</title>
+    <link rel="icon" href="icons/on-32.png" />
+    <link rel="stylesheet" href="options-style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skipToContent"></a>
+    <div class="layout">
+      <nav class="nav" data-i18n-attr="aria-label:navLabel">
+        <div class="brand">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="brand-name">GrayWeb</span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#rules" data-section="rules" data-i18n="navRules"></a></li>
+          <li><a href="#appearance" data-section="appearance" data-i18n="navAppearance"></a></li>
+          <li><a href="#general" data-section="general" data-i18n="navGeneral"></a></li>
+          <li><a href="#backup" data-section="backup" data-i18n="navBackup"></a></li>
+          <li><a href="#about" data-section="about" data-i18n="navAbout"></a></li>
+        </ul>
+      </nav>
+
+      <main class="main" id="main" tabindex="-1">
+        <!-- Rules -->
+        <section class="section" id="section-rules" aria-labelledby="rules-title">
+          <header class="section-head">
+            <div>
+              <h1 class="section-title" id="rules-title" data-i18n="navRules"></h1>
+              <p class="muted" data-i18n="rulesIntro"></p>
+            </div>
+            <button type="button" class="btn btn-primary" id="add-rule">
+              <span data-i18n="rulesAdd"></span>
+            </button>
+          </header>
+
+          <p class="mode-note" id="mode-note"></p>
+
+          <div class="card tester">
+            <label class="field-label" for="test-url" data-i18n="rulesTestLabel"></label>
+            <input
+              type="url"
+              id="test-url"
+              class="mono"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="https://www.example.com/page"
+            />
+            <p class="tester-result" id="test-result" aria-live="polite"></p>
+          </div>
+
+          <div class="toolbar" role="search">
+            <label class="visually-hidden" for="rule-search" data-i18n="rulesSearch"></label>
+            <input type="search" id="rule-search" data-i18n-attr="placeholder:rulesSearch" />
+            <label class="visually-hidden" for="filter-type" data-i18n="rulesFilterType"></label>
+            <select id="filter-type"></select>
+            <label
+              class="visually-hidden"
+              for="filter-action"
+              data-i18n="rulesFilterAction"
+            ></label>
+            <select id="filter-action"></select>
+          </div>
+
+          <p class="hint" id="reorder-hint" hidden data-i18n="rulesReorderFiltered"></p>
+          <ol class="rule-list" id="rule-list" data-i18n-attr="aria-label:navRules"></ol>
+          <div class="empty" id="rules-empty" hidden>
+            <span class="mark" aria-hidden="true"></span>
+            <p class="empty-title" data-i18n="rulesEmptyTitle"></p>
+            <p class="muted" data-i18n="rulesEmptyText"></p>
+          </div>
+          <p class="empty muted" id="rules-no-results" hidden data-i18n="rulesNoResults"></p>
+          <p class="visually-hidden" id="live" aria-live="polite"></p>
+        </section>
+
+        <!-- Appearance -->
+        <section class="section" id="section-appearance" aria-labelledby="appearance-title" hidden>
+          <header class="section-head">
+            <div>
+              <h1 class="section-title" id="appearance-title" data-i18n="navAppearance"></h1>
+              <p class="muted" data-i18n="appearanceIntro"></p>
+            </div>
+          </header>
+          <div class="appearance">
+            <div class="card">
+              <h2 class="card-title" data-i18n="appearanceGlobal"></h2>
+              <div id="global-sliders"></div>
+              <button
+                type="button"
+                class="link hint"
+                id="global-reset"
+                data-i18n="appearanceResetDefaults"
+              ></button>
+            </div>
+            <div class="card preview-card">
+              <h2 class="card-title" data-i18n="appearancePreview"></h2>
+              <div class="preview" id="preview" aria-hidden="true">
+                <div class="preview-image"></div>
+                <div class="preview-body">
+                  <span class="preview-chip preview-chip-a"></span>
+                  <span class="preview-chip preview-chip-b"></span>
+                  <span class="preview-chip preview-chip-c"></span>
+                  <p class="preview-heading" data-i18n="previewHeading"></p>
+                  <p class="preview-text" data-i18n="previewText"></p>
+                  <span class="preview-button" data-i18n="previewButton"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="card-title" data-i18n="presetsTitle"></h2>
+            <p class="muted" data-i18n="presetsIntro"></p>
+            <ul class="preset-list" id="preset-list"></ul>
+            <form class="preset-form" id="preset-form">
+              <label class="visually-hidden" for="preset-name" data-i18n="presetsName"></label>
+              <input
+                type="text"
+                id="preset-name"
+                maxlength="40"
+                data-i18n-attr="placeholder:presetsName"
+                required
+              />
+              <button type="submit" class="btn" data-i18n="presetsSave"></button>
+            </form>
+          </div>
+        </section>
+
+        <!-- General -->
+        <section class="section" id="section-general" aria-labelledby="general-title" hidden>
+          <header class="section-head">
+            <h1 class="section-title" id="general-title" data-i18n="navGeneral"></h1>
+          </header>
+          <div class="card row-card">
+            <div>
+              <h2 class="card-title" data-i18n="generalEnabled"></h2>
+              <p class="muted" data-i18n="generalEnabledHelp"></p>
+            </div>
+            <span id="enabled-slot"></span>
+          </div>
+          <fieldset class="card">
+            <legend class="card-title" data-i18n="generalMode"></legend>
+            <div class="choice-list">
+              <label class="choice">
+                <input type="radio" name="mode" value="listed" />
+                <span>
+                  <strong data-i18n="modeListed"></strong>
+                  <span class="muted" data-i18n="modeListedHelp"></span>
+                </span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="mode" value="all" />
+                <span>
+                  <strong data-i18n="modeAll"></strong>
+                  <span class="muted" data-i18n="modeAllHelp"></span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="card row-card">
+            <div>
+              <label class="card-title" for="language" data-i18n="generalLanguage"></label>
+              <p class="muted" data-i18n="generalLanguageHelp"></p>
+            </div>
+            <select id="language" class="compact">
+              <option value="auto" data-i18n="languageAuto"></option>
+              <option value="en">English</option>
+              <option value="it">Italiano</option>
+            </select>
+          </div>
+          <div class="card row-card">
+            <div>
+              <h2 class="card-title" data-i18n="generalShortcut"></h2>
+              <p class="muted" id="shortcut-text"></p>
+            </div>
+            <button
+              type="button"
+              class="btn"
+              id="shortcut-change"
+              hidden
+              data-i18n="generalShortcutChange"
+            ></button>
+          </div>
+        </section>
+
+        <!-- Backup -->
+        <section class="section" id="section-backup" aria-labelledby="backup-title" hidden>
+          <header class="section-head">
+            <h1 class="section-title" id="backup-title" data-i18n="navBackup"></h1>
+          </header>
+          <div class="card">
+            <h2 class="card-title" data-i18n="syncTitle"></h2>
+            <p class="muted" id="sync-status"></p>
+          </div>
+          <div class="card row-card">
+            <div>
+              <h2 class="card-title" data-i18n="exportTitle"></h2>
+              <p class="muted" data-i18n="exportHelp"></p>
+            </div>
+            <button type="button" class="btn" id="export" data-i18n="exportButton"></button>
+          </div>
+          <div class="card row-card">
+            <div>
+              <h2 class="card-title" data-i18n="importTitle"></h2>
+              <p class="muted" data-i18n="importHelp"></p>
+              <p class="message message-error" id="import-error" role="alert" hidden></p>
+            </div>
+            <button type="button" class="btn" id="import" data-i18n="importButton"></button>
+            <input type="file" id="import-file" accept="application/json,.json" hidden />
+          </div>
+          <div class="card row-card">
+            <div>
+              <h2 class="card-title" data-i18n="resetTitle"></h2>
+              <p class="muted" data-i18n="resetHelp"></p>
+            </div>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="reset"
+              data-i18n="resetButton"
+            ></button>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="section-about" aria-labelledby="about-title" hidden>
+          <header class="section-head">
+            <h1 class="section-title" id="about-title" data-i18n="navAbout"></h1>
+          </header>
+          <div class="card">
+            <p><strong>GrayWeb</strong> <span class="muted" id="version"></span></p>
+            <p class="muted" data-i18n="aboutText"></p>
+            <p class="about-links">
+              <a
+                href="https://github.com/alevangel/GrayWeb"
+                target="_blank"
+                rel="noopener"
+                data-i18n="aboutSource"
+              ></a>
+              <a
+                href="https://github.com/alevangel/GrayWeb/issues"
+                target="_blank"
+                rel="noopener"
+                data-i18n="aboutIssues"
+              ></a>
+              <a
+                href="https://github.com/alevangel/GrayWeb/blob/main/LICENSE"
+                target="_blank"
+                rel="noopener"
+                data-i18n="aboutLicense"
+              ></a>
+            </p>
+          </div>
+          <div class="card">
+            <h2 class="card-title" data-i18n="privacyTitle"></h2>
+            <p class="muted" data-i18n="privacyText"></p>
+          </div>
+          <div class="card">
+            <h2 class="card-title" data-i18n="permissionsTitle"></h2>
+            <dl class="permissions">
+              <dt class="mono">storage</dt>
+              <dd class="muted" data-i18n="permissionStorage"></dd>
+              <dt class="mono">&lt;all_urls&gt;</dt>
+              <dd class="muted" data-i18n="permissionHosts"></dd>
+            </dl>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Rule editor -->
+    <dialog class="dialog" id="rule-dialog" aria-labelledby="rule-dialog-title">
+      <form method="dialog" class="dialog-body" id="rule-form" novalidate>
+        <header class="dialog-head">
+          <h2 id="rule-dialog-title"></h2>
+          <button
+            type="button"
+            class="icon-btn"
+            id="rule-close"
+            data-i18n-attr="aria-label:cancel,title:cancel"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="dialog-content">
+          <div class="field">
+            <span class="field-label" id="action-label" data-i18n="editorAction"></span>
+            <div
+              class="segmented segmented-lg"
+              role="radiogroup"
+              aria-labelledby="action-label"
+              id="editor-action"
+            >
+              <button type="button" role="radio" data-value="gray" data-i18n="actionGray"></button>
+              <button type="button" role="radio" data-value="skip" data-i18n="actionSkip"></button>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="editor-type" data-i18n="editorMatchType"></label>
+              <select id="editor-type"></select>
+            </div>
+            <div class="field field-grow">
+              <label class="field-label" for="editor-pattern" data-i18n="editorPattern"></label>
+              <input
+                type="text"
+                id="editor-pattern"
+                class="mono"
+                spellcheck="false"
+                autocomplete="off"
+                aria-describedby="editor-help editor-error"
+              />
+            </div>
+          </div>
+          <p class="hint" id="editor-help"></p>
+          <p class="message message-error" id="editor-error" role="alert" hidden></p>
+          <label class="check" id="editor-ignore-case-row">
+            <input type="checkbox" id="editor-ignore-case" />
+            <span data-i18n="editorIgnoreCase"></span>
+          </label>
+
+          <div class="field">
+            <label class="field-label" for="editor-test" data-i18n="editorTest"></label>
+            <input
+              type="url"
+              id="editor-test"
+              class="mono"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="https://www.example.com/page"
+            />
+            <p class="tester-result" id="editor-test-result" aria-live="polite"></p>
+          </div>
+
+          <div class="field" id="editor-tabs-block" hidden>
+            <span class="field-label" data-i18n="editorOpenTabs"></span>
+            <ul class="tab-matches mono" id="editor-tabs"></ul>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="editor-label" data-i18n="editorLabel"></label>
+            <input
+              type="text"
+              id="editor-label"
+              maxlength="80"
+              data-i18n-attr="placeholder:editorLabelPlaceholder"
+            />
+          </div>
+
+          <fieldset class="group" id="editor-settings-group">
+            <label class="check">
+              <input type="checkbox" id="editor-own-settings" />
+              <span data-i18n="editorOwnSettings"></span>
+            </label>
+            <div id="editor-sliders" class="group-body"></div>
+          </fieldset>
+
+          <fieldset class="group">
+            <label class="check">
+              <input type="checkbox" id="editor-schedule" />
+              <span data-i18n="editorSchedule"></span>
+            </label>
+            <div class="group-body" id="editor-schedule-body">
+              <div
+                class="days"
+                id="editor-days"
+                role="group"
+                data-i18n-attr="aria-label:editorDays"
+              ></div>
+              <div class="field-row">
+                <div class="field">
+                  <label class="field-label" for="editor-start" data-i18n="editorFrom"></label>
+                  <input type="time" id="editor-start" value="09:00" />
+                </div>
+                <div class="field">
+                  <label class="field-label" for="editor-end" data-i18n="editorTo"></label>
+                  <input type="time" id="editor-end" value="18:00" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <p class="message message-warning" id="editor-warning" role="status" hidden></p>
+        </div>
+
+        <footer class="dialog-foot">
+          <button type="button" class="btn" id="rule-cancel" data-i18n="cancel"></button>
+          <button type="submit" class="btn btn-primary" id="rule-save" data-i18n="save"></button>
+        </footer>
+      </form>
+    </dialog>
+
+    <!-- Import -->
+    <dialog class="dialog dialog-sm" id="import-dialog" aria-labelledby="import-dialog-title">
+      <form method="dialog" class="dialog-body">
+        <header class="dialog-head">
+          <h2 id="import-dialog-title" data-i18n="importTitle"></h2>
+        </header>
+        <div class="dialog-content">
+          <p id="import-summary"></p>
+          <p class="muted" data-i18n="importChoice"></p>
+        </div>
+        <footer class="dialog-foot">
+          <button type="submit" class="btn" value="cancel" data-i18n="cancel"></button>
+          <button type="submit" class="btn" value="replace" data-i18n="importReplace"></button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            value="merge"
+            data-i18n="importMerge"
+          ></button>
+        </footer>
+      </form>
+    </dialog>
+
+    <!-- Confirmation -->
+    <dialog class="dialog dialog-sm" id="confirm-dialog" aria-labelledby="confirm-title">
+      <form method="dialog" class="dialog-body">
+        <header class="dialog-head">
+          <h2 id="confirm-title"></h2>
+        </header>
+        <div class="dialog-content">
+          <p class="muted" id="confirm-text"></p>
+        </div>
+        <footer class="dialog-foot">
+          <button type="submit" class="btn" value="cancel" data-i18n="cancel"></button>
+          <button type="submit" class="btn btn-danger" value="confirm" id="confirm-ok"></button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script src="options.js"></script>
+  </body>
+</html>
