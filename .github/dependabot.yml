@@ -8,6 +8,14 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: development
+    ignore:
+      # typescript-eslint supports a new TypeScript major version only some time after
+      # its release. Update TypeScript by hand when typescript-eslint supports it.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+      # The types must match the Node.js version of the project (22), not the latest.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
